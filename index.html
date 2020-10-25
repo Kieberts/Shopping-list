@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="header" class="headingClass">Einkaufszettel</h1>
+        <div id="Lists">
+            <!-- Contains two div -->
+            <!-- Each one has it task -->
+            <div id="list-items">
+                <!-- Items -->
+                <h3 class="headingClass">Items</h3>
+                
+                <!-- Textbox and Button to enter Items -->
+                <form id="addItem">
+                    <textarea id="tbxItem" class="tbxAdd" maxlength="30"></textarea>
+                    <button id="btnAddItem" class="btnAdd" type="button">Add Item</button>
+                    <div class="clear"></div>
+                </form>
+
+                <ul id="UlItems"></ul>
+
+            </div>
+            <div id="list-SuperMaeket">
+                <!-- Supermarket -->
+                <h3 class="headingClass">Supermaerket</h3>
+                
+                <!-- Textbox and Button to enter Items -->
+                <form id="addMarket">
+                    <textarea id="tbxMarket" class="tbxAdd" maxlength="30"></textarea>
+                    <button type="button" id="btnAddMarket" class="btnAdd">Add Supermaerket</button>
+                    <div class="clear"></div>
+                </form>
+
+                <ul id="UlSupermarket" class="uls"></ul>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
