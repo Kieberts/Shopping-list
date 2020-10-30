@@ -8,9 +8,8 @@
     
     <link rel="stylesheet" href="style.css">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
                     <div class="clear"></div>
                 </form>
 
-                <ul id="UlItems"></ul>
+                <ul id="UlItems" class="connectedSortable"></ul>
 
             </div>
             <div id="list-SuperMaeket">
@@ -44,15 +43,14 @@
                     <div class="clear"></div>
                 </form>
 
-                <ul id="UlSupermarket" class="uls"></ul>
+                <ul id="UlSupermarket" class="connectedSortable"></ul>
 
             </div>
         </div>
         <div class="clear"></div>
 
     </div>
-    
-    <script src="main.js"></script>
+    <script src="main.js"></script>    
 </body>
 
 </html>
