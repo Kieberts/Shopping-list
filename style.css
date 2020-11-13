@@ -26,6 +26,13 @@ body {
     width: auto;
 }
 
+#btnClearAll {
+    margin-left: 47%;
+    margin-right: auto;
+    margin-bottom: 5px;
+    width: auto;
+}
+
 #Lists {
 
     width: auto;
@@ -74,8 +81,20 @@ body {
 }
 
 .ulmarket {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
+.btnDelete {
+    width: 40%;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    margin-bottom: 2px;
+    padding-left: 5px;
+}
 
 

@@ -10,13 +10,13 @@
     
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="/path/to/dist/nested-sort.umd.min.js"></script>
     
 </head>
 
 <body>
     <div id="container">
         <h1 id="header" class="headingClass">Einkaufszettel</h1>
+        <button id="btnClearAll" class="headingClass">Clear Lists</button>
         <div id="Lists">
             <!-- Contains two div -->
             <!-- Each one has it task -->
@@ -30,8 +30,9 @@
                     <button id="btnAddItem" class="btnAdd" type="button">Add Item</button>
                     <div class="clear"></div>
                 </form>
-
-                <ul id="UlItems" class="connectedSortable"></ul>
+                
+                <ul id="UlItems" class="connectedSortable" ></ul>
+                <button id="btnDelAllITem" class="btnDelete" type="button">Delete all items</button>
 
             </div>
             <div id="list-SuperMaeket">
@@ -45,8 +46,9 @@
                     <div class="clear"></div>
                 </form>
 
-                <ul id="UlSupermarket" class="connectedSortable"></ul>
-
+                <ul id="UlSupermarket" class="connectedSortable" ></ul>
+                <button id="btnDelAllMarkets" class="btnDelete" type="button">Delete all Marktes</button>
+                
             </div>
         </div>
         <div class="clear"></div>
