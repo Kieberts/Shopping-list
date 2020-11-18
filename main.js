@@ -22,6 +22,7 @@ window.onload = function () {
         console.log(addItem.id);        
         addItem.className = 'ulItems';
         addItem.draggable = true;
+        addItem.ondragstart ="ziehen(event)";
         addItem.addEventListener("click", function() {
             console.log(addItem.id + ' was clicked');
           });
@@ -190,12 +191,7 @@ btnAddMarket.onclick = function () {
     tbxMarket.focus();
 };
 
-// 
-$(function () {
-    $("#UlItems, #UlSupermarket").sortable({
-        connectWith: ".connectedSortable"
-    }).disableSelection();
-});
+
 
 
 btnDelAllITem.onclick = function() {
@@ -258,4 +254,26 @@ function ClearSelectedItems() {
 
     document.getElementById("btnClearAll").innerText = "Clear Lists";
     document.getElementById("btnClearAll").onclick = function() {ClearAll()};
+}
+
+function AllowToDrop(ev) {
+    ev.preventDefault();
+    if ( ev.target.className == "droptarget" ) {
+        ev.target.style.border = "3px dotted red";
+      }
+}
+
+function Drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData('Apfel');
+    //ev.target.appendChild(document.getElementById(data));
+    console.log(ev.dataTransfer);
+    console.log(ev.dataTransfer.getData('text'));
+    let test = document.createElement('li');
+    test.appendChild(document.createTextNode(data));
+    listMarket.appendChild(test);
+}
+
+function ziehen(ev) {
+    ev.dataTransfer.setData('text', ev.target.id);
 }
